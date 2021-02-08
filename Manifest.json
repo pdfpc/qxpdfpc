@@ -1,0 +1,44 @@
+{
+ "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
+  "info" :
+  {
+    "name" : "qxpdfpc",
+
+    "summary" : "undefined",
+    "description" : "undefined",
+
+    "homepage" : "https://github.com/pdfpc/qxpdfpc",
+
+    "license" : "GPLv3+",
+    "authors" : [
+                  {
+                    "name" : "E. Stambulchik",
+                    "email" : "fnevgeny@gmail.com"
+                  }
+                ],
+
+    "version" : "0.1.0"
+  },
+
+  "provides" :
+  {
+    "namespace"   : "pdfpc",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation"
+  },
+
+  "externalResources": {
+        "script": [
+        ],
+        "css": [
+          "pdfpc/css/custom.css"
+        ]
+  },
+
+  "requires": {
+    "@qooxdoo/framework": "^6.0.0",
+    "@qooxdoo/compiler" : "^1.0.0"
+  }
+}
