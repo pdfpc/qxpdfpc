@@ -5,9 +5,7 @@ About
 [PDF Presenter Console (aka pdfpc)](https://pdfpc.github.io). It is mainly aimed
 at mobile (specifically, smartphone) devices.
 
-**`qxpdfpc` requires `pdfpc` at least version 4.6**, which at this moment has
-**not** been released. In other words, you need to fetch and compile the
-development version directly from [github](https://github.com/pdfpc/pdfpc).
+**`qxpdfpc` requires `pdfpc` at least version 4.6**.
 
 Installation
 ============
@@ -15,7 +13,7 @@ Installation
 - Fetch the qxpdfpc sources from [github.com](https://github.com/pdfpc/qxpdfpc).
 
 - Download and install the [Qooxdoo toolkit](https://qooxdoo.org/). You need
-  version 6.0 or above.
+  version 7.7 or above.
 
 - In the qxpdfpc root directory, run `qx compile`. This should produce
   the `compiled` directory with various files and subdirectories.
@@ -24,7 +22,7 @@ Installation
 Usage
 =====
 - Configure `pdfpc`. Set these options in the `pdfpcrc` file (`man pdfpcrc`):
-    - `option rest-static-root /full/path/to/qxpdfpc/compiled`
+    - `option rest-static-root /full/path/to/qxpdfpc/compiled/source`
     - `option rest-passwd a_very_secret_password` (yes, make it special; you do
       not want somebody else from the auditorium to control your presentation,
       do you?) In principle, `pdfpc` can generate a secure random password and
