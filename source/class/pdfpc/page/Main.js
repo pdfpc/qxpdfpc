@@ -160,8 +160,6 @@ qx.Class.define("pdfpc.page.Main",
                         var meta = r.getResponse();
                         if (meta != null) {
                             this.meta = meta;
-                            // Request the state
-                            this.rest.state();
                         }
                         break;
                     case "state":
@@ -318,6 +316,15 @@ qx.Class.define("pdfpc.page.Main",
             }
 
             this.updateConnection(connection);
+
+            // Start timer to get updates every second
+            var timer = qx.util.TimerManager.getInstance();
+            timer.start(function(userData, timerId) {
+                    // Request the current state
+                    if (this.meta != null) {
+                        this.rest.state();
+                    }
+                }, 1000, this, null, 0);
         }
     }
 });
