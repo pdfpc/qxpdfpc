@@ -294,6 +294,7 @@ qx.Class.define("pdfpc.page.Main",
             var connection = qx.module.Storage.getLocalItem("connection");
             if (connection == null) {
                 connection = {};
+                connection.ssl = false;
             }
 
             // Prefill the form
